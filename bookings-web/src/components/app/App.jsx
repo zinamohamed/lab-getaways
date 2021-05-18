@@ -1,6 +1,6 @@
 import React from 'react';
-import Places from '../../containers/Places';
+import Getaways from '../../containers/Getaways';
 
 export default function App() {
-  return <Places />;
+  return <Getaways />;
 }

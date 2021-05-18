@@ -1,4 +1,4 @@
-const getPlaces = async () => {
+export const getPlaces = async () => {
   const response = await fetch(`${process.env.BASE_URL}/places`);
   if (response.ok) {
     const result = await response.json();
@@ -21,5 +21,3 @@ const getPlaces = async () => {
     throw new Error(await response.json());
   }
 };
-
-export default getPlaces;

@@ -30,16 +30,16 @@ const Place = ({
 };
 
 Place.propTypes = {
-  name: PropTypes.string,
-  description: PropTypes.string,
-  location: PropTypes.string,
-  pricePerNight: PropTypes.number,
-  image: PropTypes.string,
-  imageThumbnail: PropTypes.string,
-  maxGuests: PropTypes.number,
-  petFriendly: PropTypes.bool,
-  pool: PropTypes.bool,
-  wifi: PropTypes.bool,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  pricePerNight: PropTypes.number.isRequired,
+  image: PropTypes.string.isRequired,
+  imageThumbnail: PropTypes.string.isRequired,
+  maxGuests: PropTypes.number.isRequired,
+  petFriendly: PropTypes.bool.isRequired,
+  pool: PropTypes.bool.isRequired,
+  wifi: PropTypes.bool.isRequired,
 };
 
 export default Place;

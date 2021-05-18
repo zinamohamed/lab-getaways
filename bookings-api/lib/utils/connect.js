@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { parse } = require('url');
+const { URL } = require('url');
 
 module.exports = (url = process.env.MONGODB_URI) => {
   mongoose.connect(url, {
@@ -10,7 +10,7 @@ module.exports = (url = process.env.MONGODB_URI) => {
   });
 
   mongoose.connection.on('connected', () => {
-    const parsedUrl = parse(url);
+    const parsedUrl = new URL(url);
     const redactedUrl = `${parsedUrl.protocol}//${parsedUrl.hostname}:${parsedUrl.port}${parsedUrl.pathname}`;
     console.log(`Connected to MongoDB at ${redactedUrl}`);
   });
