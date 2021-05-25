@@ -17,7 +17,7 @@ const Details = (props) => {
                 ?
             <h2>Loading...</h2>
                 :
-            <div>
+            <div className="details">
                 <p>{places.name}</p>
                 <img src={places.image} alt="image"/>
                 <p>{places.description}</p>

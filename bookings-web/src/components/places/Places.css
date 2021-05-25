@@ -1,0 +1,9 @@
+ul { 
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  flex-direction: column;
+}
+
+

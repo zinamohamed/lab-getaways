@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import './Places.css'
 
 const Place = ({
   name,
@@ -23,7 +24,7 @@ const Place = ({
       <img src={imageThumbnail} alt="image"/>
       <p>{description}</p>
       <p>Address: {location}</p>
-      <p>$$$: {pricePerNight}</p>
+      <p>$$$: ${pricePerNight}</p>
     </div>
   );
 };

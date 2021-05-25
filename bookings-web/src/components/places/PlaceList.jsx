@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Place from './Place';
-import styles from './Places.css'
+
 
 const PlaceList = ({ places, loading }) => {
   return (
@@ -10,10 +10,10 @@ const PlaceList = ({ places, loading }) => {
         ? 
         <h2>Loading...</h2>
         :
-        <ul aria-label="getaways" className={styles.ul}>
+        <ul aria-label="getaways">
           {
             places.map((place) => (
-            <li key={place.id} className={styles.list}>
+            <li key={place.id}>
              <Place  
              {...place} /> 
              </li>

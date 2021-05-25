@@ -2,6 +2,7 @@ import React from 'react';
 import Getaways from '../../containers/Getaways';
 import {BrowserRouter as Router, Route , Switch} from 'react-router-dom'
 import DetailsPage from '../../containers/DetailsPage'
+import './App.css'
 
 export default function App() {
   return (
