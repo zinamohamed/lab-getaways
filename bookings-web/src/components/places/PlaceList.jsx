@@ -2,14 +2,33 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Place from './Place';
 
-const PlaceList = ({ places }) => {
-  return places.map((place) => <Place key={place.id} {...place} />);
+
+const PlaceList = ({ places, loading }) => {
+  return (
+    <div>
+      { loading 
+        ? 
+        <h2>Loading...</h2>
+        :
+        <ul aria-label="getaways">
+          {
+            places.map((place) => (
+            <li key={place.id}>
+             <Place  
+             {...place} /> 
+             </li>
+             ))
+          }
+        </ul>
+      }
+    </div>
+
+  )
 };
 
 PlaceList.propTypes = {
   places: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
       location: PropTypes.string.isRequired,
