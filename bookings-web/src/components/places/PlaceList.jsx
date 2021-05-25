@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Place from './Place';
+import styles from './Places.css'
 
 const PlaceList = ({ places, loading }) => {
   return (
@@ -9,7 +10,16 @@ const PlaceList = ({ places, loading }) => {
         ? 
         <h2>Loading...</h2>
         :
-        places.map((place) => <Place key={place.id} {...place} />)
+        <ul aria-label="getaways" className={styles.ul}>
+          {
+            places.map((place) => (
+            <li key={place.id} className={styles.list}>
+             <Place  
+             {...place} /> 
+             </li>
+             ))
+          }
+        </ul>
       }
     </div>
 
@@ -19,7 +29,6 @@ const PlaceList = ({ places, loading }) => {
 PlaceList.propTypes = {
   places: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
       location: PropTypes.string.isRequired,
